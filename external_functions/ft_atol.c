@@ -6,15 +6,15 @@
 /*   By: alda-sil <alda-sil@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 21:13:23 by alda-sil          #+#    #+#             */
-/*   Updated: 2025/02/11 21:13:27 by alda-sil         ###   ########.fr       */
+/*   Updated: 2025/02/13 19:25:05 by alda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 long	ft_atol(const char *nptr)
 {
-	long 	i;
-	long 	signal;
-	long 	temp;
+	long	i;
+	long	signal;
+	long	temp;
 
 	i = 0;
 	signal = 1;

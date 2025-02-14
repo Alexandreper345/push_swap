@@ -6,16 +6,16 @@
 /*   By: alda-sil <alda-sil@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 20:59:41 by alda-sil          #+#    #+#             */
-/*   Updated: 2025/02/12 20:54:10 by alda-sil         ###   ########.fr       */
+/*   Updated: 2025/02/13 20:44:11 by alda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push.h"
 
-char *ft_strjoin_with_space(int argc, char **argv)
+char	*ft_strjoin_with_space(int argc, char **argv)
 {
-	char 	*joined;
-	char 	*temp;
+	char	*joined;
+	char	*temp;
 	int		index;
 
 	index = 1;
@@ -36,16 +36,18 @@ char *ft_strjoin_with_space(int argc, char **argv)
 	return (joined);
 }
 
-
 void	build_stack_from_args(t_list **stack, int argc, char **argv)
 {
-	char 	*joined_args;
-	char 	**numbers;
+	char	*joined_args;
+	char	**numbers;
 	int		index;
 	long	num;
-	
+
 	if (check_min_max(argc, argv))
+	{
+		ft_putstr_fd("Error\n", 2);
 		return ;
+	}	
 	index = 0;
 	joined_args = ft_strjoin_with_space(argc, argv);
 	numbers = ft_split(joined_args, ' ');
@@ -58,5 +60,4 @@ void	build_stack_from_args(t_list **stack, int argc, char **argv)
 		index++;
 	}
 	free(numbers);
-	return ;
 }

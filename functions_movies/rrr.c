@@ -6,7 +6,7 @@
 /*   By: alda-sil <alda-sil@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 21:35:55 by alda-sil          #+#    #+#             */
-/*   Updated: 2025/02/11 21:36:35 by alda-sil         ###   ########.fr       */
+/*   Updated: 2025/02/13 19:40:25 by alda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ void	ft_rrr(t_list **stack_a, t_list **stack_b)
 	t_list	*curr_a;
 	t_list	*curr_b;
 
-	prev_a = NULL;
-	prev_b = NULL;
-	if (*stack_a && *stack_b && (*stack_a)->next != NULL && (*stack_b)->next != NULL)
+	if (*stack_a && *stack_b && (*stack_a)->next && (*stack_b)->next)
 	{
 		curr_a = *stack_a;
 		curr_b = *stack_b;
@@ -41,4 +39,3 @@ void	ft_rrr(t_list **stack_a, t_list **stack_b)
 		write(1, "rrr\n", 4);
 	}
 }
-

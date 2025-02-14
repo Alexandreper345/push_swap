@@ -6,7 +6,7 @@
 /*   By: alda-sil <alda-sil@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 21:49:17 by alda-sil          #+#    #+#             */
-/*   Updated: 2025/02/12 18:38:55 by alda-sil         ###   ########.fr       */
+/*   Updated: 2025/02/13 19:15:53 by alda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void	ft_sort_int_tab(int *tab, int size)
 {
 	int	index;
-	int swap;
-	
+	int	swap;
+
 	index = 0;
 	while (index < (size - 1))
 	{
@@ -33,9 +33,9 @@ void	ft_sort_int_tab(int *tab, int size)
 
 void	lst_index(int *array, t_list **stack, int size)
 {
-	t_list *current;
+	t_list	*current;
 	int		index;
-	
+
 	current = *stack;
 	index = 0;
 	while (current)
@@ -46,7 +46,7 @@ void	lst_index(int *array, t_list **stack, int size)
 			if (current->number == array[index])
 			{
 				current->index = index;
-				break;
+				break ;
 			}
 			index++;
 		}
@@ -54,13 +54,12 @@ void	lst_index(int *array, t_list **stack, int size)
 	}
 }
 
-
 int	*array_of_list(t_list **stack, int size)
 {
-	t_list *current;
+	t_list	*current;
 	int		*array;
 	int		index;
-	
+
 	current = *stack;
 	index = 0;
 	array = (int *)malloc(sizeof(int) * size);
