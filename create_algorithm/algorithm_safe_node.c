@@ -6,12 +6,11 @@
 /*   By: alda-sil <alda-sil@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 21:24:31 by alda-sil          #+#    #+#             */
-/*   Updated: 2025/02/13 21:34:48 by alda-sil         ###   ########.fr       */
+/*   Updated: 2025/02/14 17:30:11 by alda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push.h"
-
 
 int	algorithm_safe_node(t_list **stack_a, t_list **stack_b)
 {
