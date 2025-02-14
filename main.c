@@ -6,7 +6,7 @@
 /*   By: alda-sil <alda-sil@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 19:36:51 by alda-sil          #+#    #+#             */
-/*   Updated: 2025/02/14 19:14:07 by alda-sil         ###   ########.fr       */
+/*   Updated: 2025/02/14 19:29:03 by alda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	is_sorted(t_list *stack)
 		return (0);
 	if (has_duplicate_numbers(&stack))
 	{
+		free_list(stack);
 		ft_putstr_fd("Error\n", 2);
 		return (1);
 	}
@@ -36,6 +37,7 @@ int	is_sorted(t_list *stack)
 			return (0);
 		current = current->next;
 	}
+	free_list(stack);
 	return (1);
 }
 
