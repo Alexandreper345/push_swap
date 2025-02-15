@@ -6,7 +6,7 @@
 /*   By: alda-sil <alda-sil@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 21:13:23 by alda-sil          #+#    #+#             */
-/*   Updated: 2025/02/13 19:25:05 by alda-sil         ###   ########.fr       */
+/*   Updated: 2025/02/14 20:41:42 by alda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ long	ft_atol(const char *nptr)
 	}
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		temp = temp * 10 + (nptr[i] - '0');
+		temp = (temp * 10) + (nptr[i] - '0');
 		i++;
 	}
 	return (signal * temp);

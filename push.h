@@ -6,7 +6,7 @@
 /*   By: alda-sil <alda-sil@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 18:50:03 by alda-sil          #+#    #+#             */
-/*   Updated: 2025/02/14 19:16:16 by alda-sil         ###   ########.fr       */
+/*   Updated: 2025/02/14 20:56:13 by alda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int		safe_create_node_array(t_list **stack, int *array, int size);
 int		is_list_sorted(t_list **stack, int *array, int size);
 int		ft_list_size(t_list *static_a);
 int		algorithm_safe_node(t_list **stack_a, t_list **stack_b);
-int		check_min_max(int argc, char **argv);
+int		check_min_max(char **numbers);
 int		has_duplicate_numbers(t_list **stack);
 long	ft_atol(const char *nptr);
 size_t	ft_strlen(const char *s);

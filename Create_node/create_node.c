@@ -6,7 +6,7 @@
 /*   By: alda-sil <alda-sil@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 20:59:41 by alda-sil          #+#    #+#             */
-/*   Updated: 2025/02/13 20:44:11 by alda-sil         ###   ########.fr       */
+/*   Updated: 2025/02/14 21:02:51 by alda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,15 +43,15 @@ void	build_stack_from_args(t_list **stack, int argc, char **argv)
 	int		index;
 	long	num;
 
-	if (check_min_max(argc, argv))
-	{
-		ft_putstr_fd("Error\n", 2);
-		return ;
-	}	
 	index = 0;
 	joined_args = ft_strjoin_with_space(argc, argv);
 	numbers = ft_split(joined_args, ' ');
 	free(joined_args);
+	if (check_min_max(numbers))
+	{
+		ft_putstr_fd("Error\n", 2);
+		return ;
+	}
 	while (numbers[index])
 	{
 		num = ft_atol(numbers[index]);

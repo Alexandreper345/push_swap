@@ -6,7 +6,7 @@
 /*   By: alda-sil <alda-sil@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 19:48:57 by alda-sil          #+#    #+#             */
-/*   Updated: 2025/02/13 19:12:00 by alda-sil         ###   ########.fr       */
+/*   Updated: 2025/02/14 21:14:50 by alda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,16 +54,27 @@ int	algorithm_error(int argc, char **argv)
 	return (0);
 }
 
-int	check_min_max(int argc, char **argv)
+int	check_min_max(char **numbers)
 {	
-	int	i;
-
-	i = 0;
-	while (i < argc)
+	long	 num;
+	int		index;
+	
+	index = 0;
+	while (numbers[index])
 	{
-		if (ft_atol(argv[i]) > 2147483647 || ft_atol(argv[i]) < -2147483648)
+		num = ft_atol(numbers[index]);
+		if (num > (long)2147483647 || num < (long)-2147483648)
+		{
+			index = 0;
+			while (numbers[index])
+			{
+				free(numbers[index]);
+				index++;
+			}
+			free(numbers);
 			return (1);
-		i++;
+		}
+		index++;
 	}
 	return (0);
 }
